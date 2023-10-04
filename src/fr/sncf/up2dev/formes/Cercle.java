@@ -1,6 +1,6 @@
 package fr.sncf.up2dev.formes;
 
-public class Cercle {
+public class Cercle extends Forme {
     private final double rayon;
 
     public Cercle(double rayon) {
@@ -11,7 +11,8 @@ public class Cercle {
         return rayon;
     }
 
-    public static double aire(Cercle cercle) {
-        return Math.PI * cercle.rayon * cercle.rayon;
+    @Override
+    public double aire() {
+        return Math.PI * rayon * rayon;
     }
 }

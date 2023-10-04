@@ -1,6 +1,6 @@
 package fr.sncf.up2dev.formes;
 
-public class Rectangle {
+public class Rectangle extends Forme {
     private final double longueur;
     private final double hauteur;
 
@@ -18,7 +18,8 @@ public class Rectangle {
         return hauteur;
     }
 
-    public static double aire(Rectangle rectangle) {
-        return rectangle.hauteur * rectangle.longueur;
+    @Override
+    public double aire() {
+        return this.hauteur * this.longueur;
     }
 }
